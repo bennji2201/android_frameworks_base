@@ -903,8 +903,23 @@ public class BatteryMeterView extends View implements DemoMode,
 
             // draw thin gray ring first
             canvas.drawArc(drawRect, 270, 360, false, mBackPaint);
-            // draw colored arc representing charge level
-            canvas.drawArc(drawRect, 270 + mAnimOffset, 3.6f * level, false, paint);
+            if (level == 100) { // Rainbow mode :)
+                paint.setColor(Color.RED);
+                canvas.drawArc(drawRect, 270 + mAnimOffset, 3.6f * (level/6f), false, paint);
+                paint.setColor(Color.parseColor("#FFA500"));
+                canvas.drawArc(drawRect, 270 + 60 + mAnimOffset, 3.6f * (level/6f), false, paint);
+                paint.setColor(Color.YELLOW);
+                canvas.drawArc(drawRect, 270 + 60*2 + mAnimOffset, 3.6f * (level/6f), false, paint);
+                paint.setColor(Color.GREEN);
+                canvas.drawArc(drawRect, 270 + 60*3 + mAnimOffset, 3.6f * (level/6f), false, paint);
+                paint.setColor(Color.BLUE);
+                canvas.drawArc(drawRect, 270 + 60*4 + mAnimOffset, 3.6f * (level/6f), false, paint);
+                paint.setColor(Color.MAGENTA);
+                canvas.drawArc(drawRect, 270 + 60*5 + mAnimOffset, 3.6f * (level/6f), false, paint);
+            } else {
+                // draw colored arc representing charge level
+                canvas.drawArc(drawRect, 270 + mAnimOffset, 3.6f * level, false, paint);
+            }
             // if chosen by options, draw percentage text in the middle
             // always skip percentage when 100, so layout doesnt break
             if (unknownStatus) {
