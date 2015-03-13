@@ -144,6 +144,11 @@
     <!-- USB_PREFERENCES: Notification for when no USB options chosen.  This is the title -->
     <string name="usb_choose_notification_title">Touch to choose USB options.</string>
 
+    <!-- Title of an application permission, listed so the user can choose whether they want the application to do this. -->
+    <string name="permlab_interceptPackageLaunch">intercept app launch</string>
+    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_interceptPackageLaunch">Allows an app to intercept launch of other apps</string>
+
     <!-- App ops requests -->
     <string name="app_ops_access_camera">access the camera</string>
     <string name="app_ops_access_location">access your location</string>
@@ -300,4 +305,18 @@
     <string name="usb_media_checking">USB storage is currently being checked.</string>
     <string name="usb_media_removed">USB storage has been removed.</string>
     <string name="usb_media_shared">USB storage is currently in use by a computer.</string>
+
+    <!-- LiveDisplay strings -->
+    <string name="live_display_title" translatable="false">LiveDisplay</string>
+    <string name="live_display_auto">Automatic</string>
+    <string name="live_display_auto_summary">Automatically adjust color temperature of screen after sunset and sunrise</string>
+    <string name="live_display_off">Off</string>
+    <string name="live_display_off_summary">Disable all adjustments</string>
+    <string name="live_display_day">Day</string>
+    <string name="live_display_day_summary">Use day settings only</string>
+    <string name="live_display_night">Night</string>
+    <string name="live_display_night_summary">Use night settings only</string>
+    <string name="live_display_outdoor">Outdoor (bright sun)</string>
+    <string name="live_display_outdoor_summary">Use outdoor settings only</string>
+    <string name="live_display_hint">LiveDisplay can help reduce eyestrain and help you sleep at night. Click here to try it out!</string>
 </resources>
